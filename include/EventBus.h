@@ -18,8 +18,8 @@ class EventBus {
     void addListener(Task* t);
     Event getCurrentEvent();
     bool dispatch(Event evt);
-    bool dispatch(uint16_t id, void* data, uint16_t data_size);
-    bool dispatch(uint16_t id, char* data);
+  bool dispatch(uint16_t id, const void* data, uint16_t data_size);
+  bool dispatch(uint16_t id, const char* data);
     bool dispatch(uint16_t id);
     void done(int seq);
     int getSeq();

@@ -8,10 +8,10 @@ EventEmitter::EventEmitter(EventBus* e) : e(e) {}
 bool EventEmitter::dispatch(Event event) {
     return e->dispatch(event);
 }
-bool EventEmitter::dispatch(uint16_t id, void* data, uint16_t data_size){
+bool EventEmitter::dispatch(uint16_t id, const void* data, uint16_t data_size){
     return e->dispatch(id, data, data_size);
 }
-bool EventEmitter::dispatch(uint16_t id, char* data){
+bool EventEmitter::dispatch(uint16_t id, const char* data){
     return e->dispatch(id, data);
 }
 bool EventEmitter::dispatch(uint16_t id){

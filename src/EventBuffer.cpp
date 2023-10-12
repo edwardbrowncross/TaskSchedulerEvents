@@ -11,7 +11,7 @@ EventBuffer::~EventBuffer() {
     delete buffer;
 }
 
-bool EventBuffer::push(uint16_t id, void* data, uint16_t dataSize) {
+bool EventBuffer::push(uint16_t id, const void* data, uint16_t dataSize) {
     uint16_t totalSize = ceil(dataSize/4.0)*4 + 4;
     if (getFree() < totalSize) {
         return false;
@@ -34,7 +34,7 @@ bool EventBuffer::push(uint16_t id, void* data, uint16_t dataSize) {
     return true;
 }
 
-bool EventBuffer::push(uint16_t id, char* data) {
+bool EventBuffer::push(uint16_t id, const char* data) {
     return push(id, data, strlen(data)+1);
 }
 bool EventBuffer::push(uint16_t id) {

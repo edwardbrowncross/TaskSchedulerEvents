@@ -17,8 +17,8 @@ class EventBuffer {
     EventBuffer(uint16_t size);
     ~EventBuffer();
 
-    bool push(uint16_t id, void* data, uint16_t data_size);
-    bool push(uint16_t id, char* data);
+  bool push(uint16_t id, const void* data, uint16_t data_size);
+  bool push(uint16_t id, const char* data);
     bool push(uint16_t id);
     bool push(Event event);
 

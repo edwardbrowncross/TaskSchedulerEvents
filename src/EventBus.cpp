@@ -26,14 +26,14 @@ bool EventBus::dispatch(Event evt) {
     return ok;
 }
 
-bool EventBus::dispatch(uint16_t id, void* data, uint16_t data_size){
+bool EventBus::dispatch(uint16_t id, const void* data, uint16_t data_size){
     bool ok = events->push(id, data, data_size);
     if (ok && events->getLength() == 1) {
         triggerHandlers();
     }
     return ok;
 }
-bool EventBus::dispatch(uint16_t id, char* data){
+bool EventBus::dispatch(uint16_t id, const char* data){
     bool ok = events->push(id, data);
     if (ok && events->getLength() == 1) {
         triggerHandlers();

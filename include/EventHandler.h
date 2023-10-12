@@ -13,8 +13,8 @@ class EventEmitter {
     EventEmitter(EventBus* e);
 
    protected:
-    bool dispatch(uint16_t id, void* data, uint16_t data_size);
-    bool dispatch(uint16_t id, char* data);
+  bool dispatch(uint16_t id, const void* data, uint16_t data_size);
+  bool dispatch(uint16_t id, const char* data);
     bool dispatch(uint16_t id);
     bool dispatch(Event event);
 
