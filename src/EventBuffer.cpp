@@ -2,6 +2,8 @@
 #include <math.h>
 #include "EventBuffer.h"
 
+using namespace TSEvents;
+
 EventBuffer::EventBuffer(uint16_t size) : maxSize(size), wrap(size), size(0) {
     buffer = (byte*)new uint32_t[size/4];
     length = head = tail = 0;

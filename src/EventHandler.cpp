@@ -1,7 +1,8 @@
 #include "EventHandler.h"
-
 #include "EventBus.h"
 #include "EventHandlerTask.h"
+
+using namespace TSEvents;
 
 EventEmitter::EventEmitter(EventBus* e) : e(e) {}
 

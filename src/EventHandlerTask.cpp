@@ -2,6 +2,8 @@
 #include "EventHandler.h"
 #include "EventBus.h"
 
+using namespace TSEvents;
+
 EventHandlerTask::EventHandlerTask(Scheduler* s, EventBus* _e, EventHandler* _h) : Task(0, TASK_ONCE, s, false) {
     h = _h;
     e = _e;

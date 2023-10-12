@@ -1,6 +1,8 @@
 #include "EventBus.h"
 #include <Arduino.h>
 
+using namespace TSEvents;
+
 EventBus::EventBus() {
     events = new EventBuffer(EVENT_BUFFER_SIZE);
 }
